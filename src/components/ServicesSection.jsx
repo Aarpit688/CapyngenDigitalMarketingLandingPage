@@ -1,4 +1,5 @@
 import { assets } from "../assets/assets";
+import { motion, AnimatePresence } from "framer-motion";
 
 const services = [
   {
@@ -59,43 +60,68 @@ const services = [
   },
 ];
 
+const fadeUpVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: (i) => ({
+    opacity: 1,
+    y: 0,
+    transition: { delay: i * 0.15, duration: 0.5, ease: "easeOut" },
+  }),
+};
+
 export function ServicesSection() {
   return (
-    <section className="py-20 px-6 bg-linear-to-b from-black via-slate-900 to-blue-900">
+    <section className="py-20 px-6 bg-gradient-to-b from-black via-slate-900 to-blue-900">
       <div className="max-w-7xl mx-auto text-center">
-        <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6">
+        <motion.h2
+          className="text-4xl md:text-5xl font-extrabold text-white mb-6"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeUpVariants}
+          custom={0}
+        >
           Our Digital Marketing Services
-        </h2>
-        <p className="text-xl text-white mb-12">
+        </motion.h2>
+        <motion.p
+          className="text-xl text-white mb-12 max-w-2xl mx-auto leading-relaxed"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeUpVariants}
+          custom={1}
+        >
           Experience ! ‌​‍​‌‍​‍‌​‍​‌‍​‍‌ our top-notch digital marketing suite
           without paying anything during your first month.
-        </p>
-        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
-          {services.map(({ id, title, description, image }) => (
-            <div
-              key={id}
-              className="p-8 flex flex-col items-center text-white 
-                bg-linear-to-r from-white/10 via-white/20 to-white/10 
-                backdrop-blur-lg rounded-xl shadow-lg transition-transform hover:scale-[1.03]"
-            >
-              <div
-                className="mb-6 w-full aspect-video rounded-lg overflow-hidden 
-                  bg-linear-to-tr from-indigo-400 via-purple-400 to-pink-400 
-                  flex items-center justify-center"
+        </motion.p>
+
+        <div className="grid gap-8 sm:gap-10 md:grid-cols-2 lg:grid-cols-4">
+          <AnimatePresence>
+            {services.map(({ id, title, description, image }, i) => (
+              <motion.div
+                key={id}
+                className="p-8 flex flex-col items-center text-white bg-gradient-to-r from-white/10 via-white/20 to-white/10 backdrop-blur-lg rounded-xl shadow-lg cursor-pointer hover:scale-[1.03] hover:shadow-2xl transition-transform"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fadeUpVariants}
+                custom={i + 2}
               >
-                <img
-                  src={image}
-                  alt={title}
-                  className="w-full h-full object-cover rounded-lg"
-                  loading="lazy"
-                />
-              </div>
-              <h3 className="text-xl font-bold mb-3">{title}</h3>
-              <p className="text-gray-300 text-sm leading-relaxed">
-                {description}
-              </p>
-            </div>
-          ))}
+                <div className="mb-6 w-full aspect-video rounded-lg overflow-hidden bg-gradient-to-tr from-indigo-400 via-purple-400 to-pink-400 flex items-center justify-center">
+                  <img
+                    src={image}
+                    alt={title}
+                    className="w-full h-full object-cover rounded-lg"
+                    loading="lazy"
+                  />
+                </div>
+                <h3 className="text-xl font-bold mb-3">{title}</h3>
+                <p className="text-gray-300 text-sm leading-relaxed">
+                  {description}
+                </p>
+              </motion.div>
+            ))}
+          </AnimatePresence>
         </div>
       </div>
     </section>

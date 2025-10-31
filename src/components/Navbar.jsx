@@ -31,6 +31,7 @@ export const Navbar = () => {
         <motion.div
           className="text-xl font-bold tracking-wide cursor-pointer"
           whileHover={{ scale: 1.03 }}
+          onClick={() => scrollToSection("home")}
         >
           <img src={assets.capyngenLogo} alt="" className="w-32" />
         </motion.div>
