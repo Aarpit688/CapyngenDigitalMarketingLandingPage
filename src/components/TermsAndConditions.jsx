@@ -21,7 +21,7 @@ const TermsAndConditions = () => {
   return (
     <section className="bg-slate-900 text-white w-full shadow-slate-900/50 overflow-hidden">
       <div className="relative p-8 md:p-12 h-full flex flex-col justify-center">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-slate-900 via-slate-900 to-cyan-900/10 z-0"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-linear-to-br from-slate-900 via-slate-900 to-cyan-900/10 z-0"></div>
         <div className="relative z-10 max-w-7xl mx-auto">
           <div className="flex items-center gap-4 mb-8">
             <LockIcon className="h-8 w-8 text-cyan-400" aria-hidden="true" />

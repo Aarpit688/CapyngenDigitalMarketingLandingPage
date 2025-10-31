@@ -18,7 +18,7 @@ const GetStarted = ({
   sectionBg = "bg-black/90",
 }) => (
   <section
-    className={`relative ${sectionBg} py-12 overflow-hidden  bg-gradient-to-b from-slate-800 via-slate-900 to-black`}
+    className={`relative ${sectionBg} py-12 overflow-hidden  bg-linear-to-b from-slate-800 via-slate-900 to-black`}
   >
     <div
       className={`relative z-10 py-12 px-6 md:px-12 lg:px-20 max-w-7xl mx-auto rounded-3xl overflow-hidden backdrop-blur-sm ${
@@ -88,7 +88,7 @@ const GetStarted = ({
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="md:flex-shrink-0 z-10 flex justify-center md:justify-start"
+            className="md:shrink-0 z-10 flex justify-center md:justify-start"
           >
             <a
               href=""

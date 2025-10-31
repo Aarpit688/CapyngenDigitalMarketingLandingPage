@@ -46,8 +46,8 @@ const About = () => {
   return (
     <section className="bg-slate-900 text-white w-full shadow-slate-900/50 overflow-hidden">
       <div className="relative p-8 md:p-12 h-full flex flex-col justify-center">
-        {/* Background gradient overlay */}
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-slate-900 via-slate-900 to-cyan-900/10 z-0"></div>
+        {/* Background linear overlay */}
+        <div className="absolute top-0 left-0 w-full h-full bg-linear-to-br from-slate-900 via-slate-900 to-cyan-900/10 z-0"></div>
         {/* Content container */}
         <div className="relative z-10 max-w-7xl mx-auto">
           {/* Header */}
@@ -72,7 +72,7 @@ const About = () => {
             </p>
 
             {/* Contact info and social links */}
-            <div className="!mt-10 pt-6 border-t border-slate-700/50 space-y-6">
+            <div className="mt-10! pt-6 border-t border-slate-700/50 space-y-6">
               {/* Links */}
               <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8">
                 <a
@@ -128,7 +128,7 @@ const About = () => {
                       <a
                         key={idx}
                         href={social.href}
-                        className="w-10 h-10 bg-slate-800 hover:bg-gradient-to-r hover:from-blue-500 hover:to-purple-500 rounded-lg flex items-center justify-center transition-all duration-200 hover:scale-110"
+                        className="w-10 h-10 bg-slate-800 hover:bg-linear-to-r hover:from-blue-500 hover:to-purple-500 rounded-lg flex items-center justify-center transition-all duration-200 hover:scale-110"
                         aria-label={social.label}
                       >
                         <social.icon className="w-4 h-4 text-slate-300 hover:text-white transition-colors duration-200" />

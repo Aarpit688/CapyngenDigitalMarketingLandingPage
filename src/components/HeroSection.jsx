@@ -106,7 +106,7 @@ export default function HeroSection() {
   const stepLabels = ["1", "2", "3", "4", "5", "6", "7"];
 
   return (
-    <section className="min-h-screen flex items-center justify-center px-6 md:px-20 bg-gradient-to-b from-black via-slate-900 to-slate-800 text-white font-sans">
+    <section className="min-h-screen flex items-center justify-center px-6 md:px-20 bg-linear-to-b from-black via-slate-900 to-slate-800 text-white font-sans">
       <div className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         {/* Left copy */}
         <div className="px-4 md:px-0">
@@ -119,7 +119,7 @@ export default function HeroSection() {
           </p>
 
           <div className="mt-16 text-center">
-            <button className="px-6 py-3 bg-gradient-to-r from-pink-500 to-yellow-500 text-black font-bold rounded-lg shadow-lg hover:opacity-90 transition">
+            <button className="px-6 py-3 bg-linear-to-r from-pink-500 to-yellow-500 text-black font-bold rounded-lg shadow-lg hover:opacity-90 transition">
               🚀 Register Now – Limited Offer for First 30 Clients
             </button>
           </div>
@@ -129,8 +129,8 @@ export default function HeroSection() {
         <div className="w-full flex justify-center">
           <div className="relative w-full max-w-md min-h-[550px] bg-white/6 backdrop-blur-lg rounded-3xl shadow-2xl border border-indigo-600/30 overflow-hidden">
             {/* Decorative blobs */}
-            <div className="absolute -left-8 -top-12 w-44 h-44 bg-gradient-to-tr from-indigo-400/40 via-purple-300/30 to-pink-400/30 rounded-full blur-3xl pointer-events-none" />
-            <div className="absolute right-6 bottom-8 w-36 h-36 bg-gradient-to-br from-pink-400/30 via-red-400/20 to-yellow-400/10 rounded-full blur-2xl pointer-events-none" />
+            <div className="absolute -left-8 -top-12 w-44 h-44 bg-linear-to-tr from-indigo-400/40 via-purple-300/30 to-pink-400/30 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute right-6 bottom-8 w-36 h-36 bg-linear-to-br from-pink-400/30 via-red-400/20 to-yellow-400/10 rounded-full blur-2xl pointer-events-none" />
 
             {/* Content area */}
             <form
@@ -472,7 +472,7 @@ export default function HeroSection() {
               </div>
 
               {/* Footer / navigation */}
-              <div className="px-8 py-4 border-t border-white/6 bg-gradient-to-t from-transparent to-white/2">
+              <div className="px-8 py-4 border-t border-white/6 bg-linear-to-t from-transparent to-white/2">
                 <div className="flex items-center justify-between">
                   <div>
                     {step > 1 && (

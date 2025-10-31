@@ -61,7 +61,7 @@ const services = [
 
 export function ServicesSection() {
   return (
-    <section className="py-20 px-6 bg-gradient-to-b from-black via-slate-900 to-blue-900">
+    <section className="py-20 px-6 bg-linear-to-b from-black via-slate-900 to-blue-900">
       <div className="max-w-7xl mx-auto text-center">
         <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6">
           Our Digital Marketing Services
@@ -75,12 +75,12 @@ export function ServicesSection() {
             <div
               key={id}
               className="p-8 flex flex-col items-center text-white 
-                bg-gradient-to-r from-white/10 via-white/20 to-white/10 
+                bg-linear-to-r from-white/10 via-white/20 to-white/10 
                 backdrop-blur-lg rounded-xl shadow-lg transition-transform hover:scale-[1.03]"
             >
               <div
-                className="mb-6 w-full aspect-16/9 rounded-lg overflow-hidden 
-                  bg-gradient-to-tr from-indigo-400 via-purple-400 to-pink-400 
+                className="mb-6 w-full aspect-video rounded-lg overflow-hidden 
+                  bg-linear-to-tr from-indigo-400 via-purple-400 to-pink-400 
                   flex items-center justify-center"
               >
                 <img

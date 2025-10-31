@@ -59,7 +59,7 @@ export default function GrowPresenceSection() {
 
         {/* CTA Button */}
         <div className="mt-16 text-center">
-          <button className="px-6 py-3 bg-gradient-to-r from-pink-500 to-yellow-500 text-black font-bold rounded-lg shadow-lg hover:opacity-90 transition">
+          <button className="px-6 py-3 bg-linear-to-r from-pink-500 to-yellow-500 text-black font-bold rounded-lg shadow-lg hover:opacity-90 transition">
             🚀 Sign Up Now — First 30 Clients are Totally Free
           </button>
         </div>

@@ -6,7 +6,7 @@ import {
 } from "react-icons/hi";
 
 const StatCard = ({ icon, percentage, description }) => (
-  <div className="bg-gradient-to-br from-gray-800 to-gray-900 border border-gray-700 p-6 md:p-8 rounded-xl shadow-xl hover:scale-105 hover:shadow-2xl transition-transform transition-shadow duration-300 ease-in-out backdrop-blur-sm bg-opacity-70">
+  <div className="bg-linear-to-br from-gray-800 to-gray-900 border border-gray-700 p-6 md:p-8 rounded-xl shadow-xl hover:scale-105 hover:shadow-2xl transition-transform transition-shadow duration-300 ease-in-out backdrop-blur-sm bg-opacity-70">
     <div className="flex justify-center mb-4 text-cyan-400 text-5xl">
       {icon}
     </div>
