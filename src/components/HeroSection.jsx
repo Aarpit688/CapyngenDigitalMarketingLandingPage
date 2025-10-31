@@ -50,7 +50,7 @@ function LeadForm({
 }) {
   return (
     <div
-      className={`relative w-full min-h-[550px] min-w-[500px] bg-white/6 backdrop-blur-lg rounded-3xl shadow-2xl border border-indigo-600/30 overflow-hidden transition-shadow duration-300 ${
+      className={`relative w-full min-h-[550px] lg:min-w-[500px] bg-white/6 backdrop-blur-lg rounded-3xl shadow-2xl border border-indigo-600/30 overflow-hidden transition-shadow duration-300 ${
         modalMode ? "p-8 text-white" : ""
       }`}
       style={modalMode ? { color: "white" } : {}}
@@ -130,7 +130,7 @@ function LeadForm({
                   value={formData.fullName}
                   onChange={handleChange}
                   placeholder="Your full name"
-                  className="w-full rounded-xl px-4 py-3 text-black md:text-white font-medium shadow-inner bg-transparent focus:outline-none focus:ring-4 focus:ring-indigo-500 transition"
+                  className="w-full rounded-xl px-4 py-3 text-white md:text-white font-medium shadow-inner bg-transparent focus:outline-none focus:ring-4 focus:ring-indigo-500 transition"
                   whileFocus={{
                     scale: 1.02,
                     boxShadow: "0 0 8px #6366f1",
@@ -149,7 +149,7 @@ function LeadForm({
                     value={formData.email}
                     onChange={handleChange}
                     placeholder="you@example.com"
-                    className="w-full rounded-xl px-4 py-3 text-black md:text-white font-medium shadow-inner bg-transparent focus:outline-none focus:ring-4 focus:ring-indigo-500 transition"
+                    className="w-full rounded-xl px-4 py-3 text-white md:text-white font-medium shadow-inner bg-transparent focus:outline-none focus:ring-4 focus:ring-indigo-500 transition"
                     whileFocus={{
                       scale: 1.02,
                       boxShadow: "0 0 8px #6366f1",
@@ -180,7 +180,7 @@ function LeadForm({
                     value={formData.phone}
                     onChange={handleChange}
                     placeholder="+91 99999 99999"
-                    className="w-full rounded-xl px-4 py-3 text-black md:text-white font-medium shadow-inner bg-transparent focus:outline-none focus:ring-4 focus:ring-indigo-500 transition"
+                    className="w-full rounded-xl px-4 py-3 text-white md:text-white font-medium shadow-inner bg-transparent focus:outline-none focus:ring-4 focus:ring-indigo-500 transition"
                     whileFocus={{
                       scale: 1.02,
                       boxShadow: "0 0 8px #6366f1",
@@ -216,7 +216,7 @@ function LeadForm({
                       value={formData.whatsappNumber || ""}
                       onChange={handleChange}
                       placeholder="+91 99999 99999"
-                      className="w-full rounded-xl px-4 py-3 text-black md:text-white font-medium shadow-inner bg-transparent focus:outline-none focus:ring-4 focus:ring-indigo-500 transition"
+                      className="w-full rounded-xl px-4 py-3 text-white md:text-white font-medium shadow-inner bg-transparent focus:outline-none focus:ring-4 focus:ring-indigo-500 transition"
                       whileFocus={{
                         scale: 1.02,
                         boxShadow: "0 0 8px #6366f1",
@@ -246,7 +246,7 @@ function LeadForm({
                     value={formData.city}
                     onChange={handleChange}
                     placeholder="Mumbai, Delhi, etc."
-                    className="w-full rounded-xl px-4 py-3 text-black md:text-white font-medium shadow-inner bg-transparent focus:outline-none focus:ring-4 focus:ring-indigo-500 transition"
+                    className="w-full rounded-xl px-4 py-3 text-white md:text-white font-medium shadow-inner bg-transparent focus:outline-none focus:ring-4 focus:ring-indigo-500 transition"
                     whileFocus={{
                       scale: 1.02,
                       boxShadow: "0 0 8px #6366f1",
@@ -264,7 +264,7 @@ function LeadForm({
                     value={formData.brandName}
                     onChange={handleChange}
                     placeholder="Capyngen, The MediClub"
-                    className="w-full rounded-xl px-4 py-3 text-black md:text-white font-medium shadow-inner bg-transparent focus:outline-none focus:ring-4 focus:ring-indigo-500 transition"
+                    className="w-full rounded-xl px-4 py-3 text-white md:text-white font-medium shadow-inner bg-transparent focus:outline-none focus:ring-4 focus:ring-indigo-500 transition"
                     whileFocus={{
                       scale: 1.02,
                       boxShadow: "0 0 8px #6366f1",
@@ -282,7 +282,7 @@ function LeadForm({
                     value={formData.website}
                     onChange={handleChange}
                     placeholder='If no website → Write "No Website"'
-                    className="w-full rounded-xl px-4 py-3 text-black md:text-white font-medium shadow-inner bg-transparent focus:outline-none focus:ring-4 focus:ring-indigo-500 transition"
+                    className="w-full rounded-xl px-4 py-3 text-white md:text-white font-medium shadow-inner bg-transparent focus:outline-none focus:ring-4 focus:ring-indigo-500 transition"
                     whileFocus={{
                       scale: 1.02,
                       boxShadow: "0 0 8px #6366f1",
@@ -418,7 +418,7 @@ function LeadForm({
                     value={formData.bestTime}
                     onChange={handleChange}
                     placeholder="11 AM – 4 PM / After 7 PM"
-                    className="w-full rounded-xl px-4 py-3 text-black md:text-white font-medium shadow-inner bg-transparent focus:outline-none focus:ring-4 focus:ring-indigo-500 transition"
+                    className="w-full rounded-xl px-4 py-3 text-white md:text-white font-medium shadow-inner bg-transparent focus:outline-none focus:ring-4 focus:ring-indigo-500 transition"
                     whileFocus={{
                       scale: 1.02,
                       boxShadow: "0 0 8px #6366f1",
@@ -437,7 +437,7 @@ function LeadForm({
                     onChange={handleChange}
                     rows={4}
                     placeholder="Additional details..."
-                    className="w-full rounded-xl px-4 py-3 text-black md:text-white font-medium shadow-inner bg-transparent focus:outline-none focus:ring-4 focus:ring-indigo-500 transition resize-none"
+                    className="w-full rounded-xl px-4 py-3 text-white md:text-white font-medium shadow-inner bg-transparent focus:outline-none focus:ring-4 focus:ring-indigo-500 transition resize-none"
                   />
                 </div>
               </motion.div>
@@ -675,7 +675,7 @@ export default function HeroSection() {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center px-6 md:px-20 bg-gradient-to-b from-black via-slate-900 to-slate-800 text-white font-sans pt-10"
+      className="min-h-screen flex items-center justify-center px-6 md:px-20 bg-gradient-to-b from-black via-slate-900 to-slate-800 text-white font-sans pt-24 "
     >
       <div className="max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
         {/* Left copy */}
@@ -700,7 +700,7 @@ export default function HeroSection() {
             transition={{ delay: 0.7, duration: 0.35 }}
           >
             <button
-              className="px-6 py-3 bg-gradient-to-r from-pink-500 to-yellow-500 text-black font-bold rounded-lg shadow-lg hover:opacity-90 transition transform hover:scale-[1.03] active:scale-95"
+              className="px-6 py-3 bg-gradient-to-r from-pink-500 to-yellow-500 text-white font-bold rounded-lg shadow-lg hover:opacity-90 transition transform hover:scale-[1.03] active:scale-95"
               aria-label="Register now - Limited Offer for First 30 Clients"
               type="button"
               onClick={() => setModalOpen(true)}
@@ -712,7 +712,7 @@ export default function HeroSection() {
 
         {/* Right form - unchanged, unchanged */}
         <motion.div
-          className="w-full flex justify-center"
+          className="w-full max-w-full flex justify-center"
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
