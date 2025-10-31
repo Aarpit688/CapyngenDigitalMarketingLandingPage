@@ -50,7 +50,7 @@ function LeadForm({
 }) {
   return (
     <div
-      className={`relative w-full min-h-[550px] lg:min-w-[500px] bg-white/6 backdrop-blur-lg rounded-3xl shadow-2xl border border-indigo-600/30 overflow-hidden transition-shadow duration-300 ${
+      className={`relative w-full xl:min-h-[550px] max-h-[90vh] lg:min-w-[500px] bg-white/6 backdrop-blur-lg rounded-3xl shadow-2xl border border-indigo-600/30 overflow-hidden transition-shadow duration-300 ${
         modalMode ? "p-8 text-white" : ""
       }`}
       style={modalMode ? { color: "white" } : {}}
@@ -685,10 +685,10 @@ export default function HeroSection() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
-          <h1 className="text-4xl md:text-5xl font-extrabold mb-6 leading-tight tracking-tight text-white drop-shadow-lg">
+          <h1 className="text-3xl md:text-4xl xl:text-5xl font-extrabold mb-6 leading-tight tracking-tight text-white drop-shadow-lg">
             Grow Your Brand. Get 100% FREE Social Media Marketing for 1 Month.
           </h1>
-          <p className="text-lg md:text-xl text-indigo-200 max-w-xl leading-relaxed selection:bg-indigo-600 selection:text-white">
+          <p className="text-md md:text-lg xl:text-xl text-indigo-200 max-w-xl leading-relaxed selection:bg-indigo-600 selection:text-white">
             Unlock expert-driven campaigns that help your business shine across
             Facebook, Instagram, Twitter (X), and YouTube — absolutely free.
           </p>
