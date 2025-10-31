@@ -3,7 +3,7 @@ import CountUp from "react-countup";
 
 const WhyChooseCapyngen = () => {
   return (
-    <section className="px-4 sm:px-6 lg:px-12 py-12 bg-linear-to-b from-blue-900 via-black to-gray-900 text-white shadow-lg">
+    <section className="px-4 sm:px-6 lg:px-12 py-20 bg-linear-to-b from-blue-900 via-black to-gray-900 text-white shadow-lg">
       <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-16 sm:mb-20 text-center">
         Why Choose <span className="text-blue-400">Capyngen</span>
       </h2>

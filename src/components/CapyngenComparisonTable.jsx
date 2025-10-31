@@ -35,7 +35,7 @@ const comparisonData = [
 
 const CapyngenComparisonTableDark = () => {
   return (
-    <div className="p-4 sm:p-6 bg-linear-to-r from-gray-900 via-gray-800 to-gray-900 shadow-2xl border border-gray-700">
+    <div className="px-4 sm:px-6 bg-linear-to-r from-gray-900 via-gray-800 to-gray-900 shadow-2xl border border-gray-700 py-20">
       <h2 className="text-2xl sm:text-3xl font-extrabold mb-6 sm:mb-8 text-center bg-linear-to-r from-indigo-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
         Why Capyngen Is Better Than Others
       </h2>

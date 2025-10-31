@@ -31,6 +31,7 @@ const budgetOptions = [
 export default function HeroSection() {
   const [step, setStep] = useState(1);
   const [whatsappSameAsPhone, setWhatsappSameAsPhone] = useState(true);
+  const [notification, setNotification] = useState("");
 
   const [formData, setFormData] = useState({
     fullName: "",
@@ -96,17 +97,86 @@ export default function HeroSection() {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Replace with your API call
-    console.log("submit", formData);
-    alert("Submitted — check console for payload");
+    try {
+      // Prepare payload with exact key names as API expects
+      const payload = {
+        fullName: formData.fullName,
+        email: formData.email,
+        phone: formData.phone,
+        whatsappNumber: whatsappSameAsPhone
+          ? formData.phone
+          : formData.whatsappNumber,
+        city: formData.city,
+        brandName: formData.brandName,
+        website: formData.website,
+        businessType: formData.businessType,
+        services: formData.serviceType, // API expects 'services', not 'serviceType'
+        budget: formData.budget,
+        bestTime: formData.bestTime,
+        notes: formData.notes,
+      };
+
+      const res = await fetch(
+        "https://capyngen-backendv1-1.onrender.com/api/lead",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(payload),
+        }
+      );
+
+      // Parse response for API's ok:true and message
+      const data = await res.json();
+
+      if (res.ok && data.ok) {
+        setNotification("Request received, we will connect with you shortly.");
+        setFormData({
+          fullName: "",
+          email: "",
+          phone: "",
+          whatsappNumber: "",
+          city: "",
+          brandName: "",
+          website: "",
+          businessType: "",
+          serviceType: [],
+          budget: "",
+          bestTime: "",
+          notes: "",
+        });
+        setStep(1);
+        setWhatsappSameAsPhone(true);
+
+        setTimeout(() => {
+          setNotification("");
+        }, 5000);
+      } else {
+        setNotification(
+          data.message || "Something went wrong. Please try again later."
+        );
+        setTimeout(() => {
+          setNotification("");
+        }, 5000);
+      }
+    } catch (error) {
+      setNotification("Failed to send request. Please check your connection.");
+      setTimeout(() => {
+        setNotification("");
+      }, 5000);
+    }
   };
 
   const stepLabels = ["1", "2", "3", "4", "5", "6", "7"];
 
   return (
-    <section className="min-h-screen flex items-center justify-center px-6 md:px-20 bg-linear-to-b from-black via-slate-900 to-slate-800 text-white font-sans">
+    <section
+      id="home"
+      className="min-h-screen flex items-center justify-center px-6 md:px-20 bg-linear-to-b from-black via-slate-900 to-slate-800 text-white font-sans pt-10"
+    >
       <div className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         {/* Left copy */}
         <div className="px-4 md:px-0">
@@ -178,6 +248,13 @@ export default function HeroSection() {
                   ))}
                 </div>
               </div>
+
+              {/* Notification */}
+              {notification && (
+                <div className="px-8 py-3 bg-emerald-600 text-white rounded-xl mt-4 text-center font-semibold">
+                  {notification}
+                </div>
+              )}
 
               {/* Animated step container */}
               <div className="px-8 pt-6 pb-6 overflow-auto flex-1">
@@ -326,7 +403,6 @@ export default function HeroSection() {
                       </div>
                     </motion.div>
                   )}
-                  // Step 4 - Business Type (single choice radio boxes)
                   {step === 4 && (
                     <motion.div
                       key="s4"
@@ -360,7 +436,6 @@ export default function HeroSection() {
                       </div>
                     </motion.div>
                   )}
-                  // Step 5 - Service Type (multi-choice box buttons)
                   {step === 5 && (
                     <motion.div
                       key="s5"
@@ -396,7 +471,6 @@ export default function HeroSection() {
                       </div>
                     </motion.div>
                   )}
-                  // Step 6 - Budget (single choice radio boxes)
                   {step === 6 && (
                     <motion.div
                       key="s6"

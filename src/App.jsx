@@ -14,8 +14,8 @@ import About from "./components/About";
 
 const App = () => {
   return (
-    <div className="overflow-hidden">
-      {/* <Navbar /> */}
+    <div className="overflow-hidden scroll-smooth">
+      <Navbar />
       <HeroSection />
       <GetStarted
         reverse={false}
@@ -34,13 +34,16 @@ const App = () => {
       />
 
       <FeaturesSection />
-
+      <div id="whychoose"></div>
       <WhyChooseCapyngen />
       <GrowPresenceSection />
+      <div id="whycapyngenbetter"></div>
       <CapyngenComparisonTable />
       <ResultsSection />
+      <div id="ourservices"></div>
       <ServicesSection />
       <TermsAndConditions />
+      <div id="about"></div>
       <About />
     </div>
   );

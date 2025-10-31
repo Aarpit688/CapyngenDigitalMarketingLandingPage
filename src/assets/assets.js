@@ -12,6 +12,7 @@ import eComm from "./eComm.png";
 import branding from "./branding.jpg";
 import googleAds from "./googleAds.png";
 import metaAds from "./metaAds.jpg";
+import capyngenLogo from "./capyngenLogo.png";
 
 export const assets = {
   backgroundVideo,
@@ -27,4 +28,5 @@ export const assets = {
   branding,
   googleAds,
   metaAds,
+  capyngenLogo,
 };
